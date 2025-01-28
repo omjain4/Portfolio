@@ -484,3 +484,271 @@ img {
     width: 450px;
   }
 }
+
+.projects {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduced min-width from 300px to 200px */
+  gap: 20px;
+  justify-content: center;
+  max-width: 80%; /* Adjust the max-width to make the container smaller */
+  margin: 0 auto; /* Center the container */
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 90%; /* Adjust the max-width to make the cards smaller */
+  margin: 0 auto; /* Center the cards */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.project-duration {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-tags span {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.project-button {
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.project-gif {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-button:hover {
+  background: #444;
+}
+/* Default Light Mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f9f9f9;
+  --nav-bg: #ffffff;
+  --button-bg: #000000;
+  --button-text: #ffffff;
+}
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --nav-bg: #181818;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+}
+
+/* Apply Dark Mode Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.nav {
+  background-color: var(--nav-bg);
+}
+
+.button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+/* Dark Mode Toggle Container */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Toggle Label Styling */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color:  var(--text-color);  /* Default text color */
+}
+
+/* Icon inside the label */
+.toggle-label i {
+  margin: 0 5px;
+}
+
+/* Hide the default checkbox */
+#dark-mode-switch {
+  display: none;
+}
+h1, h2, h3, h4, h5, h6, p, a, .navbar__item {
+  color: var(--text-color); /* Use text color variable */
+}
+
+/* Dark Mode Styles for Toggle */
+body.dark-mode .toggle-label {
+  color: white; /* Text color in dark mode */
+}
+
+/* Customize the toggle switch appearance (optional) */
+#dark-mode-switch:checked + .toggle-label {
+  color: #4caf50; /* Optional color change when dark mode is active */
+}
+
+/* Additional Dark Mode Styles */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode .navbar__item {
+  color: var(--text-color); /* White text color for headings, paragraphs, links, and navbar items */
+}
+
+/* Ensure links are visible in dark mode */
+body.dark-mode a {
+  color: var(--text-color);
+}
+
+
+
+
+.contact__button {
+  background-color: var(--button-bg); /* Use button background variable */
+  color: var(--button-text); /* Use button text variable */
+}/* Additional styles for specific elements */
+.contact__input {
+  background-color: var(--card-bg); /* Use card background variable */
+  color: var(--text-color); /* Use text color variable */
+}
+
+.contact__button {
+  background-color: var(--button-bg); /* Use button background variable */
+  color: var(--button-text); /* Use button text variable */
+}
+.skills-list span {
+
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+/* Education Section */
+.education {
+  max-width: 800px;
+  margin: auto;
+}
+/* Education Container */
+.edu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Education Item */
+.edu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.edu-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.edu-info {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.edu-info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.edu-info p {
+  font-size: 14px;
+  margin: 2px 0;
+  color: #555;
+}
+
+.edu-year {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}

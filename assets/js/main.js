@@ -55,3 +55,24 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+// Dark Mode Toggle Logic
+const darkModeSwitch = document.getElementById('dark-mode-switch');
+const body = document.body;
+
+// Load saved mode from localStorage
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    body.classList.add('dark-mode');
+    darkModeSwitch.checked = true;
+}
+
+// Toggle Dark Mode
+darkModeSwitch.addEventListener('change', () => {
+    if (darkModeSwitch.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+    }
+});
