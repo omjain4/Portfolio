@@ -66,13 +66,3 @@ if (localStorage.getItem('dark-mode') === 'enabled') {
     darkModeSwitch.checked = true;
 }
 
-// Toggle Dark Mode
-darkModeSwitch.addEventListener('change', () => {
-    if (darkModeSwitch.checked) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('dark-mode', 'enabled');
-    } else {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('dark-mode', 'disabled');
-    }
-});
