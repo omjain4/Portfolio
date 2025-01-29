@@ -3,12 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="assets/css/styles.css">
-
-        <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
         <title>Portfolio</title>
     </head>
     <body>
@@ -18,21 +14,19 @@
                 <div>
                     <a href="#" class="nav__logo">Om Jain</a>
                 </div>
-
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
                 </div>
-           
-                
             </nav>
         </header>
 
@@ -41,14 +35,17 @@
             <section class="home bd-grid" id="home">
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Om</span><br> Web Developer</h1>
-
                     <a href="#contact" class="button">Contact</a>
+                    <a href="assets/Om-Jain-Resume.pdf" class="button" download> Resume</a>
                 </div>
 
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/omjain4/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://github.com/omjain4" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
+                
+                    
+               
 
                 <div class="home__img">
                     <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -61,8 +58,13 @@
                         </g>
                     </svg>
                 </div>
+                
             </section>
 
+            
+
+      
+            <!--===== EDUCATION =====-->
             <section class="education">
                 <h2 class="section-title">Education</h2>
                 <div class="edu-container" style="padding-top: 50px;">
@@ -94,7 +96,7 @@
                     </div>
                 </div>
             </section>
-            <!--===== ABOUT =====-->
+
             <section class="about section " id="about" style="padding-top: 15px;">
                 <h2 class="section-title">About</h2>
 
@@ -109,6 +111,37 @@
                 </div>
             </section>
 
+
+
+            <!--===== EXPERIENCE =====-->
+            <section class="experience" id="experience">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience__container">
+                    <div class="experience__item">
+                        <!-- Project Preview Card -->
+                        <div class="experience__preview">
+                            <div class="preview__image">
+                                <img src="project-thumbnail.jpg" alt="Project Preview">
+                            </div>
+                            <div class="preview__overlay">
+                                <span class="preview__text">Project Preview</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Content -->
+                        <div class="experience__content">
+                            <h3>Intern at Girl's Armour Foundation</h3>
+                            <p class="experience__role">NGO Intern (August 2024 - October 2024)</p>
+                            <p class="experience__description">
+                                Contributed to the development of the organization's digital presence. Worked on designing a responsive
+                                website using HTML, CSS, and JavaScript. Collaborated with the team to implement features aimed at
+                                improving user engagement and raising awareness about the foundation's mission.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="skills"  >
                 <h2 class="section-title">Skills</h2>
                 <div class="skills-list">
@@ -119,49 +152,47 @@
                 </div>
             </section>
 
+            <!--===== PROJECTS =====-->
             <section class="projects section" id="projects">
                 <h2 class="section-title">Check out my latest work</h2>
-           
                 <div class="projects__container">
                     <!-- Project 1 -->
                     <div class="project-card">
-                        <img src="assets/img/threadscape.gif" alt="Threadscape GIF" class="project-gif">
-                        <h3 class="project-title">Threadscape</h3>
-                        <p class="project-duration">December 2024 - December 2024</p>
+                        <img src="./assets/WIN_20250129_16_35_59_Pro-ezgif.com-video-to-gif-converter.gif" alt="Blog-Website GIF" class="project-gif">
+                        <h3 class="project-title">Blog-Website</h3>
+                        <p class="project-duration">November 2024 - November 2024</p>
                         <p class="project-description">
-                            Developed Threadscape, a collaborative discussion platform built with Next.js,
-                            allowing users to easily manage threads and communities.
+                            Developed a platform for composing, editing, and sharing personal blogs with a clean, responsive design for a seamless
+                            user experience.
+                            Integrated MongoDB for storing user-generated content and ensuring scalability, with navigation optimized for both
+                            desktop and mobile devices
                         </p>
-                        <div class="project-tags">
-                            <span>Next.js</span>
-                            <span>TypeScript</span>
+                        <div class="project-tags" style="padding-bottom: 10px;">
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>JavaScript</span>
                             <span>MongoDB</span>
-                            <span>TailwindCSS</span>
-                            <span>JWT</span>
-                            <span>Bcrypt</span>
-                            <span>Shadcn UI</span>
-                            <span>ZOD</span>
-                            <span>REST API</span>
-                            <span>Clerk</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-button">🌐 Website</a>
-                            <a href="#" class="project-button">💻 Source</a>
+                            <a href="https://github.com/omjain4/Blog-Website/tree/main/ejs-challenge-final" class="project-button">💻 Source</a>
                         </div>
                     </div>
-            
                     <!-- Project 2 -->
                     <div class="project-card">
-                        <img src="assets/img/talkspace.gif" alt="TalkSpace GIF" class="project-gif">
-                        <h3 class="project-title">TalkSpace</h3>
-                        <p class="project-duration">December 2024 - January 2025</p>
+                        <img src="./assets/WIN_20250129_16_35_59_Pro-ezgif.com-video-to-gif-converter.gif" alt="TalkSpace GIF" class="project-gif">
+                        <h3 class="project-title">PostMitra - Smart India Hackathon Project</h3>
+                        <p class="project-duration">August 2024 - November 2024</p>
                         <p class="project-description">
-                            TalkSpace is an innovative web application built using the Next.js framework,
-                            designed to make virtual communication seamless and efficient.
+                            Developed a solution to optimize postal services with features such as real-time tracking, delivery scheduling, and
+                            notifications.
+                            Created a companion Android app with Flutter and Dart for mobile access to delivery schedules, parcel tracking, and notifications.
                         </p>
                         <div class="project-tags">
-                            <span>Next.js</span>
-                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
                             <span>MongoDB</span>
                             <span>TailwindCSS</span>
                             <span>JWT</span>
@@ -172,20 +203,17 @@
                             <span>Stream</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-button">🌐 Website</a>
-                            <a href="#" class="project-button">💻 Source</a>
+                            <a href="https://postmitra.netlify.app/" class="project-button">🌐 Website</a>
+                            <a href="https://github.com/omjain4/SIH" class="project-button">💻 Source</a>
+                            <a href="https://github.com/omjain4/SIH/releases/tag/1.0.0" class="project-button">📳 App</a>
                         </div>
                     </div>
                 </div>
             </section>
             
-            
-            
-
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
-            
                 <div class="contact__container bd-grid">
                     <form action="https://formsubmit.co/omjain236@gmail.com" method="POST" class="contact__form">
                         <input type="text" name="name" placeholder="Name" class="contact__input" required>
@@ -195,7 +223,7 @@
                     </form>
                 </div>
             </section>
-            
+
         </main>
 
         <!--===== FOOTER =====-->
@@ -206,14 +234,9 @@
                 <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
         </footer>
 
-
-        <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
     </body>
 </html>
