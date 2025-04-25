@@ -30,7 +30,7 @@
             color: white;
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect width="32" height="32" fill="none" stroke="%231d1d21" stroke-width="2"/></svg>');
             letter-spacing: 1px;
-            margin: 0; /* Removed margin-left for mobile */
+            margin: 0;
         }
 
         .minecraft-font {
@@ -51,14 +51,14 @@
             background-color: var(--minecraft-green);
             color: white;
             border: 4px solid var(--minecraft-dark-green);
-            padding: 10px 20px; /* Increased padding for touch */
+            padding: 10px 20px;
             font-family: 'Press Start 2P', cursive;
-            font-size: 12px; /* Smaller font for mobile */
+            font-size: 12px;
             text-transform: uppercase;
             position: relative;
             transition: all 0.1s;
             box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
-            touch-action: manipulation; /* Better touch handling */
+            touch-action: manipulation;
         }
 
         .dev-button {
@@ -160,7 +160,7 @@
             text-shadow: 3px 3px 0 var(--minecraft-red);
             position: relative;
             display: inline-block;
-            font-size: 1.75rem; /* Smaller for mobile */
+            font-size: 1.75rem;
         }
 
         .dev-section-title {
@@ -299,6 +299,18 @@
         .minecraft-pixel-border {
             border: 3px solid var(--minecraft-gray);
             border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="none" stroke="%237e7e7e" stroke-width="2"/></svg>') 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px;
+            background-color: white;
+        }
+
+        .minecraft-pixel-border img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            object-fit: contain;
         }
 
         .service-card {
@@ -352,7 +364,7 @@
             top: 50%;
             transform: translateY(-50%);
             z-index: 100;
-            display: none; /* Hidden on mobile by default */
+            display: none;
             flex-direction: column;
             gap: 8px;
         }
@@ -380,7 +392,7 @@
         }
 
         .experience-preview {
-            height: 250px; /* Reduced for mobile */
+            height: 250px;
             width: 100%;
             object-fit: cover;
         }
@@ -391,10 +403,11 @@
         }
 
         .profile-image {
-        max-width: 300px; /* Adjusted for mobile to ensure it fits well */
-        margin: 0 auto; /* Center the image horizontally */
-        display: block; /* Ensure it behaves as a block element for centering */
-    }
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-fit: cover;
+        }
 
         .social-icons {
             position: relative;
@@ -413,7 +426,7 @@
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             body {
-                font-size: 16px; /* Slightly smaller base font */
+                font-size: 16px;
             }
 
             .container {
@@ -461,10 +474,10 @@
             }
 
             .profile-image {
-        max-width: 300px; /* Adjusted for mobile to ensure it fits well */
-        margin: 0 auto; /* Center the image horizontally */
-        display: block; /* Ensure it behaves as a block element for centering */
-    }
+                max-width: 300px;
+                margin: 0 auto;
+                display: block;
+            }
 
             .social-icons {
                 gap: 12px;
@@ -479,7 +492,7 @@
             }
 
             .project-card img {
-                height: 150px; /* Smaller project images */
+                height: 150px;
             }
 
             .experience-preview {
@@ -495,13 +508,23 @@
                 border: 3px solid var(--dev-purple);
             }
 
+            .minecraft-pixel-border img {
+                max-width: 150px;
+                min-height: 100px;
+            }
+
+            .minecraft-pixel-border {
+                border: 2px solid var(--minecraft-gray);
+                padding: 1px;
+            }
+
             section {
                 padding-left: 15px !important;
                 padding-right: 15px !important;
             }
 
             .mini-map {
-                display: none; /* Ensure mini-map is hidden */
+                display: none;
             }
 
             #nav-menu {
@@ -741,7 +764,7 @@
                     <div class="flex flex-col items-center gap-4">
                         <div class="flex justify-center">
                             <div class="minecraft-pixel-border p-2 bg-white">
-                                <img src="./assets/Walchand-Institute-of-Technology<Player-Logo (1).webp" alt="Walchand Institute of Technology" class="w-full h-auto">
+                                <img src="./assets/wit.webp" alt="Walchand Institute of Technology" class="w-full h-auto max-w-[200px] object-contain" onerror="this.src='https://via.placeholder.com/200x200.png?text=WIT+Logo';">
                             </div>
                         </div>
                         
