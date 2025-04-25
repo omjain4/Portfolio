@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
+        
         :root {
             --minecraft-green: #5b7c3a;
             --minecraft-dark-green: #3a4a23;
@@ -28,9 +29,9 @@
             font-family: 'VT323', monospace;
             background-color: var(--minecraft-black);
             color: white;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect width="32" height="32" fill="none" stroke="%231d1d21" stroke-width="2"/></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none" stroke="%231d1d21" stroke-width="2"/></svg>');
             letter-spacing: 1px;
-            margin: 0;
+            margin-left: 200px;
         }
 
         .minecraft-font {
@@ -39,26 +40,25 @@
 
         .dev-stamp {
             border: 4px dashed var(--dev-purple);
-            padding: 6px;
+            padding: 8px;
             background-color: white;
             color: black;
             transform: rotate(5deg);
             display: inline-block;
-            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
         }
 
         .minecraft-button {
             background-color: var(--minecraft-green);
             color: white;
             border: 4px solid var(--minecraft-dark-green);
-            padding: 10px 20px;
+            padding: 8px 16px;
             font-family: 'Press Start 2P', cursive;
-            font-size: 12px;
+            font-size: 14px;
             text-transform: uppercase;
             position: relative;
             transition: all 0.1s;
-            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
-            touch-action: manipulation;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
         }
 
         .dev-button {
@@ -83,8 +83,8 @@
 
         .minecraft-card {
             background-color: var(--minecraft-brown);
-            border: 4px solid var(--minecraft-dark-brown);
-            box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
+            border: 6px solid var(--minecraft-dark-brown);
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
             transition: all 0.2s;
         }
 
@@ -94,16 +94,16 @@
         }
 
         .minecraft-card:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0 rgba(0,0,0,0.3);
         }
 
         .minecraft-input {
             background-color: white;
-            border: 3px solid var(--minecraft-gray);
+            border: 4px solid var(--minecraft-gray);
             padding: 8px;
             font-family: 'VT323', monospace;
-            font-size: 18px;
+            font-size: 20px;
             color: black;
         }
 
@@ -114,7 +114,7 @@
 
         .minecraft-nav {
             background-color: var(--minecraft-dark-brown);
-            border-bottom: 4px solid var(--minecraft-brown);
+            border-bottom: 6px solid var(--minecraft-brown);
         }
 
         .dev-nav {
@@ -125,7 +125,7 @@
         .minecraft-nav-link {
             color: white;
             position: relative;
-            padding: 6px 12px;
+            padding: 8px 16px;
         }
 
         .minecraft-nav-link:hover {
@@ -139,10 +139,10 @@
         .minecraft-nav-link::after {
             content: '';
             position: absolute;
-            bottom: -4px;
+            bottom: -6px;
             left: 0;
             width: 0;
-            height: 3px;
+            height: 4px;
             background-color: var(--minecraft-yellow);
             transition: width 0.3s;
         }
@@ -157,15 +157,14 @@
 
         .minecraft-section-title {
             color: var(--minecraft-yellow);
-            text-shadow: 3px 3px 0 var(--minecraft-red);
+            text-shadow: 4px 4px 0 var(--minecraft-red);
             position: relative;
             display: inline-block;
-            font-size: 1.75rem;
         }
 
         .dev-section-title {
             color: var(--minecraft-light-blue);
-            text-shadow: 3px 3px 0 var(--dev-purple);
+            text-shadow: 4px 4px 0 var(--dev-purple);
         }
 
         .minecraft-section-title::before, .minecraft-section-title::after {
@@ -174,7 +173,6 @@
             top: 50%;
             transform: translateY(-50%);
             color: var(--minecraft-red);
-            font-size: 1.5rem;
         }
 
         .dev-section-title::before, .dev-section-title::after {
@@ -183,22 +181,22 @@
         }
 
         .minecraft-section-title::before {
-            left: -30px;
+            left: -40px;
         }
 
         .minecraft-section-title::after {
-            right: -30px;
+            right: -40px;
         }
 
         .minecraft-skill-tag {
             background-color: var(--minecraft-blue);
             color: white;
-            padding: 3px 10px;
+            padding: 4px 12px;
             border-radius: 0;
-            border: 2px solid var(--minecraft-light-blue);
+            border: 3px solid var(--minecraft-light-blue);
             display: inline-block;
-            margin: 3px;
-            font-size: 14px;
+            margin: 4px;
+            font-size: 16px;
         }
 
         .dev-skill-tag {
@@ -214,11 +212,11 @@
 
         .minecraft-terminal {
             background-color: #1d1d21;
-            border: 6px solid var(--dev-purple);
+            border: 8px solid var(--dev-purple);
             color: #0f0;
-            padding: 15px;
+            padding: 20px;
             position: relative;
-            box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
             font-family: 'VT323', monospace;
         }
 
@@ -247,11 +245,11 @@
             transform: translateX(-50%);
             background-color: var(--minecraft-black);
             color: white;
-            padding: 3px 6px;
-            border: 2px solid var(--minecraft-gray);
+            padding: 4px 8px;
+            border: 3px solid var(--minecraft-gray);
             white-space: nowrap;
-            font-size: 12px;
-            margin-bottom: 4px;
+            font-size: 14px;
+            margin-bottom: 5px;
             z-index: 100;
         }
 
@@ -267,10 +265,10 @@
 
         .minecraft-chest {
             background-color: var(--minecraft-dark-brown);
-            border: 6px solid var(--minecraft-brown);
+            border: 8px solid var(--minecraft-brown);
             position: relative;
-            padding: 15px;
-            box-shadow: 0 6px 0 rgba(0,0,0,0.3);
+            padding: 20px;
+            box-shadow: 0 8px 0 rgba(0,0,0,0.3);
         }
 
         .dev-chest {
@@ -281,13 +279,13 @@
         .minecraft-chest::before {
             content: '';
             position: absolute;
-            top: -6px;
+            top: -8px;
             left: 0;
             width: 100%;
-            height: 12px;
+            height: 15px;
             background-color: var(--minecraft-brown);
-            border-left: 6px solid var(--minecraft-dark-brown);
-            border-right: 6px solid var(--minecraft-dark-brown);
+            border-left: 8px solid var(--minecraft-dark-brown);
+            border-right: 8px solid var(--minecraft-dark-brown);
         }
 
         .dev-chest::before {
@@ -297,40 +295,29 @@
         }
 
         .minecraft-pixel-border {
-            border: 3px solid var(--minecraft-gray);
-            border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="none" stroke="%237e7e7e" stroke-width="2"/></svg>') 3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2px;
-            background-color: white;
-        }
-
-        .minecraft-pixel-border img {
-            width: 100%;
-            height: auto;
-            max-width: 200px;
-            object-fit: contain;
+            border: 4px solid var(--minecraft-gray);
+            border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="none" stroke="%237e7e7e" stroke-width="2"/></svg>') 4;
         }
 
         .service-card {
             background-color: var(--minecraft-black);
-            border: 4px solid var(--dev-purple);
-            padding: 15px;
+            border: 6px solid var(--dev-purple);
+            padding: 20px;
             transition: all 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(138, 43, 226, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
         }
 
         .service-icon {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--minecraft-light-blue);
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
 
+        /* Project hover effect */
         .project-card {
             transition: all 0.3s ease;
             position: relative;
@@ -338,8 +325,8 @@
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(138, 43, 226, 0.4);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
         }
 
         .project-card::before {
@@ -358,213 +345,153 @@
             opacity: 1;
         }
 
+        /* Mini map styles */
         .mini-map {
             position: fixed;
-            right: 10px;
+            right: 20px;
             top: 50%;
             transform: translateY(-50%);
             z-index: 100;
-            display: none;
+            display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
         }
 
         .map-flag {
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             border-radius: 4px;
             cursor: pointer;
             transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .map-flag:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
 
         .map-flag.active {
-            transform: scale(1.1);
-            box-shadow: 0 0 8px 2px var(--minecraft-light-blue);
+            transform: scale(1.2);
+            box-shadow: 0 0 10px 3px var(--minecraft-light-blue);
         }
 
+        /* Experience section enhancements */
         .experience-preview {
-            height: 250px;
+            height: 450px;
             width: 100%;
             object-fit: cover;
         }
 
+        /* Home section enhancements */
         .home-container {
-            min-height: 80vh;
-            padding: 15px 0;
+            min-height: 100vh;
+            padding: 20px 0;
         }
 
         .profile-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
+            width: 500px;
+            height: 400px;
             object-fit: cover;
         }
 
+        /* Social icons alignment */
         .social-icons {
-            position: relative;
-            bottom: 0;
+            position: absolute;
+            bottom: -40px;
+            right: 0;
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             width: 100%;
-            margin-top: 10px;
         }
-
+        
+        /* Developer Toolkit section enhancements */
         .dev-toolkit {
-            padding: 30px 0;
+            padding: 40px 0;
         }
 
-        /* Mobile-specific styles */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
+    .minecraft-section-title::before, .minecraft-section-title::after {
+        display: none;
+    }
+    
+    .mini-map {
+        display: none;
+    }
 
-            .container {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
+    .home-container {
+        flex-direction: column;
+        padding: 20px 0;
+    }
 
-            .minecraft-section-title {
-                font-size: 1.5rem;
-                text-shadow: 2px 2px 0 var(--minecraft-red);
-            }
+    .profile-image {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        display: block;
+    }
 
-            .dev-section-title {
-                text-shadow: 2px 2px 0 var(--dev-purple);
-            }
+    .social-icons {
+        position: static;
+        margin-top: 20px;
+        justify-content: center;
+    }
 
-            .minecraft-section-title::before, .minecraft-section-title::after {
-                display: none;
-            }
+    .experience-preview {
+        height: 300px;
+    }
 
-            .minecraft-nav-link {
-                font-size: 14px;
-                padding: 6px 10px;
-            }
+    section {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 
-            .minecraft-button {
-                font-size: 11px;
-                padding: 8px 16px;
-            }
+    .service-card {
+        padding: 15px;
+    }
 
-            .minecraft-skill-tag {
-                font-size: 12px;
-                padding: 2px 8px;
-                margin: 2px;
-            }
+    .service-icon {
+        font-size: 2rem;
+    }
 
-            .minecraft-terminal {
-                padding: 12px;
-                border: 4px solid var(--dev-purple);
-            }
+    .project-card img {
+        height: 150px;
+    }
 
-            .home-container {
-                flex-direction: column;
-                padding: 15px;
-            }
+    .minecraft-card {
+        border: 4px solid var(--minecraft-dark-brown);
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+    }
 
-            .profile-image {
-                max-width: 300px;
-                margin: 0 auto;
-                display: block;
-            }
+    .dev-card {
+        border: 4px solid var(--dev-purple);
+    }
 
-            .social-icons {
-                gap: 12px;
-            }
+    .minecraft-pixel-border {
+        border: 2px solid var(--minecraft-gray);
+        padding: 1px;
+    }
 
-            .service-card {
-                padding: 12px;
-            }
+    #nav-menu {
+        padding: 10px;
+    }
 
-            .service-icon {
-                font-size: 1.75rem;
-            }
+    #nav-menu ul li {
+        margin-bottom: 10px;
+    }
 
-            .project-card img {
-                height: 150px;
-            }
+    .minecraft-nav {
+        padding: 10px 0;
+    }
 
-            .experience-preview {
-                height: 200px;
-            }
-
-            .minecraft-card {
-                border: 3px solid var(--minecraft-dark-brown);
-                box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
-            }
-
-            .dev-card {
-                border: 3px solid var(--dev-purple);
-            }
-
-            .minecraft-pixel-border img {
-                max-width: 150px;
-                min-height: 100px;
-            }
-
-            .minecraft-pixel-border {
-                border: 2px solid var(--minecraft-gray);
-                padding: 1px;
-            }
-
-            section {
-                padding-left: 15px !important;
-                padding-right: 15px !important;
-            }
-
-            .mini-map {
-                display: none;
-            }
-
-            #nav-menu {
-                padding: 10px;
-            }
-
-            #nav-menu ul li {
-                margin-bottom: 10px;
-            }
-
-            .minecraft-nav {
-                padding: 10px 0;
-            }
-
-            .nav__logo {
-                font-size: 1.25rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .minecraft-section-title {
-                font-size: 1.25rem;
-            }
-
-            .minecraft-button {
-                font-size: 10px;
-                padding: 6px 12px;
-            }
-
-            .minecraft-skill-tag {
-                font-size: 11px;
-            }
-
-            .profile-image {
-                max-width: 200px;
-            }
-
-            .social-icons .text-3xl {
-                font-size: 1.5rem;
-            }
+    .nav__logo {
+        font-size: 1.5rem;
+    }
         }
     </style>
 </head>
@@ -583,12 +510,12 @@
     <header class="minecraft-nav dev-nav sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div>
-                <a href="#" class="nav__logo minecraft-font text-xl text-white flex items-center">
+                <a href="#" class="nav__logo minecraft-font text-2xl text-white flex items-center">
                     <span class="bg-white text-black px-2 mr-2">👨‍💻</span> Om's Dev Service
                 </a>
             </div>
             
-            <div class="hidden md:flex space-x-4">
+            <div class="hidden md:flex space-x-6">
                 <a href="#home" class="minecraft-nav-link dev-nav-link minecraft-font active-link">Home</a>
                 <a href="#services" class="minecraft-nav-link dev-nav-link minecraft-font">Services</a>
                 <a href="#education" class="minecraft-nav-link dev-nav-link minecraft-font">Education</a>
@@ -605,8 +532,8 @@
         </nav>
         
         <!-- Mobile menu -->
-        <div id="nav-menu" class="hidden md:hidden bg-minecraft-black py-3 px-4 border-b-4 border-dev-purple">
-            <ul class="space-y-2">
+        <div id="nav-menu" class="hidden md:hidden bg-minecraft-black py-4 px-4 border-b-4 border-dev-purple">
+            <ul class="space-y-3">
                 <li><a href="#home" class="minecraft-nav-link dev-nav-link minecraft-font block">Home</a></li>
                 <li><a href="#services" class="minecraft-nav-link dev-nav-link minecraft-font block">Services</a></li>
                 <li><a href="#education" class="minecraft-nav-link dev-nav-link minecraft-font block">Education</a></li>
@@ -617,39 +544,39 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-4">
+    <main class="container mx-auto px-2">
         <!-- Home Section - Developer Terminal -->
-        <section id="home" class="home-container flex flex-col items-center justify-center">
-            <div class="w-full max-w-md">
-                <div class="minecraft-terminal relative mx-auto">
-                    <div class="mb-4">
+        <section id="home" class="home-container flex flex-col md:flex-row items-center justify-center">
+            <div class="md:w-1/2">
+                <div class="minecraft-terminal relative max-w-md mx-auto">
+                    <div class="mb-6">
                         <p class="terminal-prompt">user@devservice:~$ <span class="terminal-command">whoami</span></p>
                         <p class="terminal-output">Om Jain - Full Stack Developer</p>
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <p class="terminal-prompt">user@devservice:~$ <span class="terminal-command">cat about.txt</span></p>
                         <p class="terminal-output">Passionate developer crafting digital solutions with clean code and innovative thinking.</p>
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <p class="terminal-prompt">user@devservice:~$ <span class="terminal-command">./start_service.sh</span></p>
                         <p class="terminal-output">🚀 Developer Service Initialized...</p>
                     </div>
-                    <div class="flex flex-wrap gap-3 mt-6">
+                    <div class="flex flex-wrap gap-4 mt-8">
                         <a href="#contact" class="minecraft-button dev-button">Hire Me</a>
                         <a href="./assets/Om Jain.pdf" class="minecraft-button bg-minecraft-blue border-minecraft-light-blue" target="_blank" rel="noopener noreferrer">View Resume</a>
                     </div>
                 </div>
             </div>
             
-            <div class="w-full flex justify-center relative">
+            <div class="md:w-1/2 flex justify-center relative">
                 <div class="dev-chest">
                     <img src="./assets/img/2.jpg" alt="Om Jain" class="profile-image minecraft-pixel-art">
                 </div>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/omjain4/" class="text-2xl text-minecraft-light-blue hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="LinkedIn">
+                    <a href="https://www.linkedin.com/in/omjain4/" class="text-3xl text-minecraft-light-blue hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="LinkedIn">
                         <i class='bx bxl-linkedin'></i>
                     </a>
-                    <a href="https://github.com/omjain4" class="text-2xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="GitHub">
+                    <a href="https://github.com/omjain4" class="text-3xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="GitHub">
                         <i class='bx bxl-github'></i>
                     </a>
                 </div>
@@ -657,20 +584,20 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-10">
-            <h2 class="minecraft-section-title dev-section-title minecraft-font text-2xl mb-12 text-center">Development Services</h2>
+        <section id="services"  style="padding-left: 100px; padding-right: 100px;">
+            <h2 class="minecraft-section-title dev-section-title minecraft-font text-3xl md:text-4xl mb-16 text-center">Development Services</h2>
             
-            <div class="grid grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Web Development Service -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class='bx bx-globe'></i>
                     </div>
-                    <h3 class="minecraft-font text-lg text-minecraft-yellow mb-3">Web Development</h3>
-                    <p class="text-base">
+                    <h3 class="minecraft-font text-xl text-minecraft-yellow mb-4">Web Development</h3>
+                    <p class="text-lg">
                         Crafting responsive, performant websites and web applications using modern technologies like React, Node.js, and MongoDB.
                     </p>
-                    <div class="mt-3 flex flex-wrap gap-2">
+                    <div class="mt-4 flex flex-wrap gap-2">
                         <span class="minecraft-skill-tag dev-skill-tag">HTML5</span>
                         <span class="minecraft-skill-tag dev-skill-tag">CSS3</span>
                         <span class="minecraft-skill-tag dev-skill-tag">JavaScript</span>
@@ -683,11 +610,11 @@
                     <div class="service-icon">
                         <i class='bx bx-mobile-alt'></i>
                     </div>
-                    <h3 class="minecraft-font text-lg text-minecraft-yellow mb-3">Mobile Development</h3>
-                    <p class="text-base">
+                    <h3 class="minecraft-font text-xl text-minecraft-yellow mb-4">Mobile Development</h3>
+                    <p class="text-lg">
                         Building cross-platform mobile applications with Flutter for seamless performance on both iOS and Android.
                     </p>
-                    <div class="mt-3 flex flex-wrap gap-2">
+                    <div class="mt-4 flex flex-wrap gap-2">
                         <span class="minecraft-skill-tag dev-skill-tag">Flutter</span>
                         <span class="minecraft-skill-tag dev-skill-tag">Dart</span>
                         <span class="minecraft-skill-tag dev-skill-tag">Firebase</span>
@@ -699,11 +626,11 @@
                     <div class="service-icon">
                         <i class='bx bx-server'></i>
                     </div>
-                    <h3 class="minecraft-font text-lg text-minecraft-yellow mb-3">Backend Development</h3>
-                    <p class="text-base">
+                    <h3 class="minecraft-font text-xl text-minecraft-yellow mb-4">Backend Development</h3>
+                    <p class="text-lg">
                         Creating robust server-side applications, APIs, and databases to power your digital products.
                     </p>
-                    <div class="mt-3 flex flex-wrap gap-2">
+                    <div class="mt-4 flex flex-wrap gap-2">
                         <span class="minecraft-skill-tag dev-skill-tag">Node.js</span>
                         <span class="minecraft-skill-tag dev-skill-tag">Express</span>
                         <span class="minecraft-skill-tag dev-skill-tag">MongoDB</span>
@@ -714,40 +641,40 @@
         </section>
 
         <!-- About Section - Developer Profile -->
-        <section id="about" class="py-10">
-            <h2 class="minecraft-section-title dev-section-title minecraft-font text-2xl mb-12 text-center">About The Developer</h2>
+        <section id="about" class="py-20" style="padding-left: 100px; padding-right: 100px;">
+            <h2 class="minecraft-section-title dev-section-title minecraft-font text-3xl md:text-4xl mb-16 text-center">About The Developer</h2>
             
-            <div class="flex flex-col items-center gap-8">
-                <div class="flex justify-center">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/3 flex justify-center">
                     <div class="minecraft-card p-2 max-w-xs">
                         <img src="https://via.placeholder.com/300x300.png?text=Om+Jain" alt="Om Jain" class="w-full h-auto minecraft-pixel-art">
                     </div>
                 </div>
                 
-                <div class="w-full">
-                    <div class="minecraft-terminal p-6">
-                        <h3 class="minecraft-font text-xl mb-3 text-minecraft-light-blue">Om Jain</h3>
-                        <p class="text-base mb-4">
+                <div class="md:w-2/3">
+                    <div class="minecraft-terminal p-8">
+                        <h3 class="minecraft-font text-2xl md:text-3xl mb-4 text-minecraft-light-blue">Om Jain</h3>
+                        <p class="text-lg mb-6">
                             <span class="dev-stamp minecraft-font">FULL-STACK</span>
-                            <span class="ml-3 dev-stamp minecraft-font">DEV</span>
+                            <span class="ml-4 dev-stamp minecraft-font">DEV</span>
                         </p>
-                        <p class="text-lg leading-relaxed terminal-output">
+                        <p class="text-xl leading-relaxed terminal-output">
                             Passionate full-stack developer dedicated to crafting innovative digital solutions. 
                             With expertise across the entire development stack, I transform ideas into functional, 
-                            user-friendly applications.
+                            user-friendly applications that make a real impact.
                         </p>
-                        <div class="mt-6 grid grid-cols-3 gap-3">
+                        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div class="text-center">
-                                <div class="minecraft-font text-minecraft-yellow text-lg">100%</div>
-                                <div class="text-minecraft-light-blue text-sm">Code Quality</div>
+                                <div class="minecraft-font text-minecraft-yellow text-xl">100%</div>
+                                <div class="text-minecraft-light-blue">Code Quality</div>
                             </div>
                             <div class="text-center">
-                                <div class="minecraft-font text-minecraft-yellow text-lg">24/7</div>
-                                <div class="text-minecraft-light-blue text-sm">Support</div>
+                                <div class="minecraft-font text-minecraft-yellow text-xl">24/7</div>
+                                <div class="text-minecraft-light-blue">Support</div>
                             </div>
                             <div class="text-center">
-                                <div class="minecraft-font text-minecraft-yellow text-lg">∞</div>
-                                <div class="text-minecraft-light-blue text-sm">Creativity</div>
+                                <div class="minecraft-font text-minecraft-yellow text-xl">∞</div>
+                                <div class="text-minecraft-light-blue">Creativity</div>
                             </div>
                         </div>
                     </div>
@@ -756,26 +683,26 @@
         </section>
 
         <!-- Education Section - Developer Training -->
-        <section id="education" class="py-10">
-            <h2 class="minecraft-section-title dev-section-title minecraft-font text-2xl mb-12 text-center">Developer Training</h2>
+        <section id="education" class="py-20"  style="padding-left: 100px; padding-right: 100px;">
+            <h2 class="minecraft-section-title dev-section-title minecraft-font text-3xl md:text-4xl mb-16 text-center">Developer Training</h2>
             
             <div class="max-w-4xl mx-auto">
-                <div class="dev-card p-4">
-                    <div class="flex flex-col items-center gap-4">
-                        <div class="flex justify-center">
+                <div class="dev-card p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="md:w-1/4 flex justify-center">
                             <div class="minecraft-pixel-border p-2 bg-white">
-                                <img src="./assets/wit.webp" alt="Walchand Institute of Technology" class="w-full h-auto max-w-[200px] object-contain" onerror="this.src='https://via.placeholder.com/200x200.png?text=WIT+Logo';">
+                                <img src="./assets/wit.webp" alt="Walchand Institute of Technology" class="w-full h-auto">
                             </div>
                         </div>
                         
-                        <div class="text-center">
-                            <h3 class="minecraft-font text-lg text-minecraft-light-blue">Walchand Institute Of Technology</h3>
-                            <p class="text-base">Bachelor's Degree of Computer Science</p>
+                        <div class="md:w-2/4">
+                            <h3 class="minecraft-font text-xl md:text-2xl text-minecraft-light-blue">Walchand Institute Of Technology</h3>
+                            <p class="text-lg">Bachelor's Degree of Computer Science</p>
                             <p class="text-minecraft-light-blue">Specialization in Software Engineering</p>
                         </div>
                         
-                        <div class="text-center">
-                            <div class="minecraft-font text-minecraft-yellow text-lg">2022 - 2026</div>
+                        <div class="md:w-1/4 text-right">
+                            <div class="minecraft-font text-minecraft-yellow text-xl">2022 - 2026</div>
                             <div class="text-minecraft-light-blue">In Progress</div>
                         </div>
                     </div>
@@ -784,29 +711,29 @@
         </section>
 
         <!-- Experience Section - Developer Work -->
-        <section id="experience" class="py-10">
-            <h2 class="minecraft-section-title dev-section-title minecraft-font text-2xl mb-12 text-center">Developer Experience</h2>
+        <section id="experience" class="py-20"  style="padding-left: 100px; padding-right: 100px;">
+            <h2 class="minecraft-section-title dev-section-title minecraft-font text-3xl md:text-4xl mb-16 text-center">Developer Experience</h2>
             
             <div class="max-w-4xl mx-auto">
-                <div class="dev-card p-4">
-                    <div class="flex flex-col gap-4">
-                        <div>
+                <div class="dev-card p-4 md:p-6">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="md:w-1/2">
                             <div class="relative overflow-hidden minecraft-pixel-border">
-                                <img src="./assets/intern.gif" alt="Project Preview" class="experience-preview w-full h-auto">
+                                <img src="./assets/intern.gif" alt="Project Preview" class="experience-preview w-full h-auto ">
                                 <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                    <a href="https://girlsarmour.in/" class="minecraft-button dev-button text-base">Visit Website</a>
+                                    <a href="https://girlsarmour.in/" class="minecraft-button dev-button text-lg">Visit Website</a>
                                 </div>
                             </div>
                         </div>
                         
-                        <div>
-                            <h3 class="minecraft-font text-lg text-minecraft-light-blue">Intern at Girl's Armour Foundation</h3>
+                        <div class="md:w-1/2">
+                            <h3 class="minecraft-font text-xl md:text-2xl text-minecraft-light-blue">Intern at Girl's Armour Foundation</h3>
                             <p class="text-minecraft-yellow minecraft-font">Web Developer (August 2024 - October 2024)</p>
-                            <p class="mt-3 text-base">
+                            <p class="mt-4 text-lg">
                                 Contributed to the development of the organization's digital presence. Designed and implemented a responsive
                                 website using modern web technologies. Collaborated with the team to enhance user engagement and digital awareness.
                             </p>
-                            <p class="mt-3 minecraft-font">Delivered Solution:</p>
+                            <p class="mt-4 minecraft-font">Delivered Solution:</p>
                             <a href="https://girlsarmour.in/" class="minecraft-button dev-button inline-block mt-2">🌐 View Website</a>
                         </div>
                     </div>
@@ -815,12 +742,12 @@
         </section>
 
         <!-- Skills Section - Developer Tools -->
-        <section class="dev-toolkit py-10">
-            <h2 class="minecraft-section-title dev-section-title minecraft-font text-2xl mb-12 text-center">Developer Toolkit</h2>
+        <section class="dev-toolkit"  style="padding-left: 100px; padding-right: 100px;">
+            <h2 class="minecraft-section-title dev-section-title minecraft-font text-3xl md:text-4xl mb-16 text-center">Developer Toolkit</h2>
             
             <div class="max-w-6xl mx-auto">
-                <div class="dev-card p-4">
-                    <div class="flex flex-wrap justify-center gap-2">
+                <div class="dev-card p-2 md:p-4">
+                    <div class="flex flex-wrap justify-center">
                         <span class="minecraft-skill-tag dev-skill-tag">Java</span>
                         <span class="minecraft-skill-tag dev-skill-tag">Python</span>
                         <span class="minecraft-skill-tag dev-skill-tag">React.js</span>
@@ -845,36 +772,36 @@
         </section>
 
         <!-- Projects Section - Code Deliveries -->
-        <section id="projects" class="py-10">
-            <h2 class="minecraft-section-title dev-section-title minecraft-font text-2xl mb-12 text-center">Code Deliveries</h2>
+        <section id="projects" class="py-20"  style="padding-left: 100px; padding-right: 100px;">
+            <h2 class="minecraft-section-title dev-section-title minecraft-font text-3xl md:text-4xl mb-16 text-center">Code Deliveries</h2>
             
-            <div class="grid grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="project-card dev-card p-0 overflow-hidden">
                     <div class="relative">
-                        <img src="./assets/Videotube.gif" alt="VideoTube GIF" class="w-full h-40 object-cover">
+                        <img src="./assets/Videotube.gif" alt="VideoTube GIF" class="w-full h-48 object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <a href="https://video-tube-frontend-iz2n-git-main-om-jains-projects.vercel.app/" class="minecraft-button dev-button text-base">Visit Project</a>
+                            <a href="https://video-tube-frontend-iz2n-git-main-om-jains-projects.vercel.app/" class="minecraft-button dev-button text-lg">Visit Project</a>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="minecraft-font text-lg text-minecraft-light-blue">VideoTube</h3>
-                        <p class="text-minecraft-yellow minecraft-font text-sm">December 2024 - January 2024</p>
-                        <p class="mt-3 text-base">
+                    <div class="p-6">
+                        <h3 class="minecraft-font text-xl text-minecraft-light-blue">VideoTube</h3>
+                        <p class="text-minecraft-yellow minecraft-font">December 2024 - January 2024</p>
+                        <p class="mt-4">
                             Full-stack video sharing platform with features like views, likes, subscriptions, 
                             comments, and watch history. Implemented JWT authentication and Cloudinary integration.
                         </p>
-                        <div class="mt-3 flex flex-wrap gap-2">
+                        <div class="mt-4 flex flex-wrap gap-2">
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">React.js</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Node.js</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Express.js</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Cloudinary</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">JWT</span>
                         </div>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <a href="https://video-tube-frontend-iz2n-git-main-om-jains-projects.vercel.app/" class="minecraft-button dev-button text-xs">🌐 Website</a>
-                            <a href="https://github.com/omjain4/Chai-Backend" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-xs">💻 Backend</a>
-                            <a href="https://github.com/omjain4/VideoTube-Frontend" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-xs">💻 Frontend</a>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="https://video-tube-frontend-iz2n-git-main-om-jains-projects.vercel.app/" class="minecraft-button dev-button text-sm">🌐 Website</a>
+                            <a href="https://github.com/omjain4/Chai-Backend" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-sm">💻 Backend</a>
+                            <a href="https://github.com/omjain4/VideoTube-Frontend" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-sm">💻 Frontend</a>
                         </div>
                     </div>
                 </div>
@@ -882,28 +809,28 @@
                 <!-- Project 2 -->
                 <div class="project-card dev-card p-0 overflow-hidden">
                     <div class="relative">
-                        <img src="./assets/Blog.gif" alt="Blog-Website GIF" class="w-full h-40 object-cover">
+                        <img src="./assets/Blog.gif" alt="Blog-Website GIF" class="w-full h-48 object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <a href="https://blog-website-1-hqle.onrender.com/" class="minecraft-button dev-button text-base">Visit Project</a>
+                            <a href="https://blog-website-1-hqle.onrender.com/" class="minecraft-button dev-button text-lg">Visit Project</a>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="minecraft-font text-lg text-minecraft-light-blue">Blog-Website</h3>
-                        <p class="text-minecraft-yellow minecraft-font text-sm">November 2024 - November 2024</p>
-                        <p class="mt-3 text-base">
+                    <div class="p-6">
+                        <h3 class="minecraft-font text-xl text-minecraft-light-blue">Blog-Website</h3>
+                        <p class="text-minecraft-yellow minecraft-font">November 2024 - November 2024</p>
+                        <p class="mt-4">
                             Platform for composing, editing, and sharing personal blogs with clean, responsive design.
                             Integrated MongoDB for content storage and scalability.
                         </p>
-                        <div class="mt-3 flex flex-wrap gap-2">
+                        <div class="mt-4 flex flex-wrap gap-2">
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Node.js</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Express.js</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">JavaScript</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">MongoDB</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">CSS</span>
                         </div>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <a href="https://blog-website-1-hqle.onrender.com/" class="minecraft-button dev-button text-xs">🌐 Website</a>
-                            <a href="https://github.com/omjain4/Blog-Website/tree/main/ejs-challenge-final" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-xs">💻 Source</a>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="https://blog-website-1-hqle.onrender.com/" class="minecraft-button dev-button text-sm">🌐 Website</a>
+                            <a href="https://github.com/omjain4/Blog-Website/tree/main/ejs-challenge-final" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-sm">💻 Source</a>
                         </div>
                     </div>
                 </div>
@@ -911,38 +838,38 @@
                 <!-- Project 3 -->
                 <div class="project-card dev-card p-0 overflow-hidden">
                     <div class="relative">
-                        <img src="./assets/Postmitra.gif" alt="PostMitra GIF" class="w-full h-40 object-cover">
+                        <img src="./assets/Postmitra.gif" alt="PostMitra GIF" class="w-full h-48 object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <a href="https://postmitra.netlify.app/" class="minecraft-button dev-button text-base">Visit Project</a>
+                            <a href="https://postmitra.netlify.app/" class="minecraft-button dev-button text-lg">Visit Project</a>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="minecraft-font text-lg text-minecraft-light-blue">PostMitra</h3>
-                        <p class="text-minecraft-yellow minecraft-font text-sm">August 2024 - November 2024</p>
-                        <p class="mt-3 text-base">
+                    <div class="p-6">
+                        <h3 class="minecraft-font text-xl text-minecraft-light-blue">PostMitra</h3>
+                        <p class="text-minecraft-yellow minecraft-font">August 2024 - November 2024</p>
+                        <p class="mt-4">
                             Smart India Hackathon project optimizing postal services with real-time tracking,
                             delivery scheduling, and notifications. Companion Flutter app for mobile access.
                         </p>
-                        <div class="mt-3 flex flex-wrap gap-2">
+                        <div class="mt-4 flex flex-wrap gap-2">
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Node.js</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Express.js</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">MongoDB</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">Flutter</span>
                             <span class="minecraft-skill-tag dev-skill-tag text-xs">HTML</span>
                         </div>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <a href="https://postmitra.netlify.app/" class="minecraft-button dev-button text-xs">🌐 Website</a>
-                            <a href="https://github.com/omjain4/SIH" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-xs">💻 Source</a>
-                            <a href="https://github.com/omjain4/SIH/releases/tag/1.0.0" class="minecraft-button bg-minecraft-green border-minecraft-dark-green text-xs">📳 App</a>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="https://postmitra.netlify.app/" class="minecraft-button dev-button text-sm">🌐 Website</a>
+                            <a href="https://github.com/omjain4/SIH" class="minecraft-button bg-minecraft-gray border-minecraft-light-gray text-sm">💻 Source</a>
+                            <a href="https://github.com/omjain4/SIH/releases/tag/1.0.0" class="minecraft-button bg-minecraft-green border-minecraft-dark-green text-sm">📳 App</a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- More Projects -->
-                <div class="dev-card p-4">
+                <div class="dev-card p-6 col-span-1 md:col-span-2 lg:col-span-3">
                     <div class="text-center">
-                        <h3 class="minecraft-font text-xl text-minecraft-light-blue mb-3">More Code Deliveries</h3>
-                        <p class="text-base mb-4">
+                        <h3 class="minecraft-font text-2xl text-minecraft-light-blue mb-4">More Code Deliveries</h3>
+                        <p class="text-xl mb-6">
                             🚀 Explore more of my work on GitHub!<br>
                             Various web and mobile development projects, experiments, and open-source contributions.
                         </p>
@@ -955,29 +882,29 @@
         </section>
 
         <!-- Contact Section - Request Development Service -->
-        <section id="contact" class="py-10">
-            <h2 class="minecraft-section-title dev-section-title minecraft-font text-2xl mb-12 text-center">Request Development Service</h2>
+        <section id="contact" class="py-20"  style="padding-left: 100px; padding-right: 100px;">
+            <h2 class="minecraft-section-title dev-section-title minecraft-font text-3xl md:text-4xl mb-16 text-center">Request Development Service</h2>
             
             <div class="max-w-2xl mx-auto">
-                <div class="minecraft-terminal p-4">
-                    <form action="https://formsubmit.co/omjain236@gmail.com" method="POST" class="space-y-4">
+                <div class="minecraft-terminal p-6 md:p-8">
+                    <form action="https://formsubmit.co/omjain236@gmail.com" method="POST" class="space-y-6">
                         <div>
-                            <label for="name" class="block minecraft-font text-base mb-1 terminal-prompt">Client Name</label>
+                            <label for="name" class="block minecraft-font text-lg mb-2 terminal-prompt">Client Name</label>
                             <input type="text" id="name" name="name" placeholder="Your name" class="minecraft-input w-full" required>
                         </div>
                         
                         <div>
-                            <label for="email" class="block minecraft-font text-base mb-1 terminal-prompt">Contact Email</label>
+                            <label for="email" class="block minecraft-font text-lg mb-2 terminal-prompt">Contact Email</label>
                             <input type="email" id="email" name="email" placeholder="Your email" class="minecraft-input w-full" required>
                         </div>
                         
                         <div>
-                            <label for="message" class="block minecraft-font text-base mb-1 terminal-prompt">Project Requirements</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Describe your project needs" class="minecraft-input w-full" required></textarea>
+                            <label for="message" class="block minecraft-font text-lg mb-2 terminal-prompt">Project Requirements</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Describe your project needs" class="minecraft-input w-full" required></textarea>
                         </div>
                         
                         <div class="text-center">
-                            <button type="submit" class="minecraft-button dev-button px-8">
+                            <button type="submit" class="minecraft-button dev-button px-10">
                                 <i class='bx bx-paper-plane mr-2'></i> Send Request
                             </button>
                         </div>
@@ -988,35 +915,35 @@
     </main>
 
     <!-- Footer - Developer Service Stamp -->
-    <footer class="bg-minecraft-black py-8 border-t-4 border-dev-purple">
+    <footer class="bg-minecraft-black py-10 border-t-4 border-dev-purple">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col items-center">
-                <div class="mb-4">
-                    <p class="minecraft-font text-xl text-white">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="minecraft-font text-2xl text-white">
                         <span class="bg-white text-black px-2 mr-2">👨‍💻</span> Om's Dev Service
                     </p>
-                    <p class="text-minecraft-light-gray mt-1 text-sm">Coding solutions since 2022</p>
+                    <p class="text-minecraft-light-gray mt-2">Coding solutions since 2022</p>
                 </div>
                 
-                <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/omjain_4?igsh=MXYya2Ezd3Zld2toMw==" class="text-xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="Instagram">
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/omjain_4?igsh=MXYya2Ezd3Zld2toMw==" class="text-2xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="Instagram">
                         <i class='bx bxl-instagram'></i>
                     </a>
-                    <a href="https://x.com/OmJain33418468?t=9EA4KPtc17uvaAhWaubB9Q&s=09" class="text-xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="Twitter">
+                    <a href="https://x.com/OmJain33418468?t=9EA4KPtc17uvaAhWaubB9Q&s=09" class="text-2xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="Twitter">
                         <i class='bx bxl-twitter'></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/omjain4/" class="text-xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="LinkedIn">
+                    <a href="https://www.linkedin.com/in/omjain4/" class="text-2xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="LinkedIn">
                         <i class='bx bxl-linkedin'></i>
                     </a>
-                    <a href="https://github.com/omjain4" class="text-xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="GitHub">
+                    <a href="https://github.com/omjain4" class="text-2xl text-white hover:text-minecraft-yellow minecraft-tooltip" data-tooltip="GitHub">
                         <i class='bx bxl-github'></i>
                     </a>
                 </div>
             </div>
             
-            <div class="mt-6 text-center text-minecraft-light-gray">
+            <div class="mt-10 text-center text-minecraft-light-gray">
                 <p>© 2024 Om's Developer Service. All code securely delivered.</p>
-                <p class="mt-1 text-xs">Built with <span class="text-minecraft-red">❤</span> and <span class="text-dev-purple">code</span></p>
+                <p class="mt-2 text-sm">Built with <span class="text-minecraft-red">❤</span> and <span class="text-dev-purple">code</span></p>
             </div>
         </div>
     </footer>
@@ -1038,7 +965,7 @@
                 
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 60,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                     
@@ -1065,7 +992,7 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 100)) {
+                if (pageYOffset >= (sectionTop - 150)) {
                     current = section.getAttribute('id');
                 }
             });
@@ -1098,7 +1025,7 @@
             
             terminalLines.forEach((line, index) => {
                 const lineDiv = document.createElement('div');
-                lineDiv.className = 'mb-4';
+                lineDiv.className = 'mb-6';
                 
                 const promptSpan = document.createElement('span');
                 promptSpan.className = 'terminal-prompt';
@@ -1121,7 +1048,7 @@
                 // Add buttons after last line
                 if (index === terminalLines.length - 1) {
                     const buttonsDiv = document.createElement('div');
-                    buttonsDiv.className = 'flex flex-wrap gap-3 mt-6';
+                    buttonsDiv.className = 'flex flex-wrap gap-4 mt-8';
                     
                     const hireButton = document.createElement('a');
                     hireButton.href = '#contact';
