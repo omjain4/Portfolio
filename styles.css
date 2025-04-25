@@ -1,0 +1,1115 @@
+:root {
+  --minecraft-green: #5b7c3a;
+  --minecraft-dark-green: #3a4a23;
+  --minecraft-brown: #8b5a2b;
+  --minecraft-dark-brown: #5d3a1a;
+  --minecraft-red: #b02e26;
+  --minecraft-blue: #3c44aa;
+  --minecraft-light-blue: #3ab3da;
+  --minecraft-gray: #7e7e7e;
+  --minecraft-light-gray: #c0c0c0;
+  --minecraft-yellow: #f5c842;
+  --minecraft-black: #1d1d21;
+  --dev-purple: #8a2be2;
+  --dev-dark-purple: #5f1d9c;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background-color: var(--minecraft-black);
+  color: white;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none" stroke="%231d1d21" stroke-width="2"/></svg>');
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.minecraft-font {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.dev-stamp {
+  border: 4px dashed var(--dev-purple);
+  padding: 8px;
+  background-color: white;
+  color: black;
+  transform: rotate(5deg);
+  display: inline-block;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  margin-left: 16px;
+}
+
+.minecraft-button {
+  background-color: var(--minecraft-green);
+  color: white;
+  border: 4px solid var(--minecraft-dark-green);
+  padding: 8px 16px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.1s;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dev-button {
+  background-color: var(--dev-purple);
+  border-color: var(--dev-dark-purple);
+}
+
+.minecraft-button:hover {
+  background-color: var(--minecraft-dark-green);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.dev-button:hover {
+  background-color: var(--dev-dark-purple);
+}
+
+.minecraft-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.minecraft-card {
+  background-color: var(--minecraft-brown);
+  border: 6px solid var(--minecraft-dark-brown);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+  transition: all 0.2s;
+  padding: 8px;
+  max-width: 300px;
+}
+
+.dev-card {
+  background-color: var(--minecraft-black);
+  border: 6px solid var(--dev-purple);
+  padding: 16px;
+}
+
+.minecraft-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 rgba(0,0,0,0.3);
+}
+
+.minecraft-input {
+  background-color: white;
+  border: 4px solid var(--minecraft-gray);
+  padding: 8px;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.minecraft-input:focus {
+  outline: none;
+  border-color: var(--minecraft-light-blue);
+}
+
+.minecraft-nav {
+  background-color: var(--minecraft-dark-brown);
+  border-bottom: 6px solid var(--minecraft-brown);
+}
+
+.dev-nav {
+  background-color: var(--dev-dark-purple);
+  border-color: var(--dev-purple);
+}
+
+.minecraft-nav-link {
+  color: white;
+  position: relative;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.minecraft-nav-link:hover {
+  color: var(--minecraft-yellow);
+}
+
+.dev-nav-link:hover {
+  color: var(--minecraft-light-blue);
+}
+
+.minecraft-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--minecraft-yellow);
+  transition: width 0.3s;
+}
+
+.dev-nav-link::after {
+  background-color: var(--minecraft-light-blue);
+}
+
+.minecraft-nav-link:hover::after {
+  width: 100%;
+}
+
+.minecraft-section-title {
+  color: var(--minecraft-yellow);
+  text-shadow: 4px 4px 0 var(--minecraft-red);
+  position: relative;
+  display: inline-block;
+}
+
+.dev-section-title {
+  color: var(--minecraft-light-blue);
+  text-shadow: 4px 4px 0 var(--dev-purple);
+}
+
+.minecraft-section-title::before, .minecraft-section-title::after {
+  content: '👨‍💻';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--minecraft-red);
+}
+
+.dev-section-title::before, .dev-section-title::after {
+  content: '💻';
+  color: var(--dev-purple);
+}
+
+.minecraft-section-title::before {
+  left: -40px;
+}
+
+.minecraft-section-title::after {
+  right: -40px;
+}
+
+.minecraft-skill-tag {
+  background-color: var(--minecraft-blue);
+  color: white;
+  padding: 4px 12px;
+  border: 3px solid var(--minecraft-light-blue);
+  display: inline-block;
+  margin: 4px;
+  font-size: 16px;
+}
+
+.dev-skill-tag {
+  background-color: var(--dev-purple);
+  border-color: var(--minecraft-light-blue);
+}
+
+.minecraft-pixel-art {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Ensure no stray buttons are positioned over the terminal */
+.minecraft-terminal {
+  position: relative;
+  background-color: #1d1d21;
+  border: 8px solid var(--dev-purple);
+  color: #0f0;
+  padding: 20px;
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+  font-family: 'VT323', monospace;
+  max-width: 100%;
+}
+
+/* Remove any stray absolute positioned elements */
+.minecraft-terminal > *:not(.terminal-buttons) {
+  position: static;
+}
+
+/* Ensure terminal buttons are the only interactive elements */
+.terminal-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.terminal-prompt {
+  color: var(--minecraft-light-blue);
+}
+
+.terminal-command {
+  color: var(--minecraft-yellow);
+}
+
+.terminal-output {
+  color: #0f0;
+}
+
+.minecraft-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.minecraft-tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--minecraft-black);
+  color: white;
+  padding: 4px 8px;
+  border: 3px solid var(--minecraft-gray);
+  white-space: nowrap;
+  font-size: 14px;
+  margin-bottom: 5px;
+  z-index: 100;
+}
+
+@keyframes pixelate {
+  0% { filter: blur(0); }
+  50% { filter: blur(1px); }
+  100% { filter: blur(0); }
+}
+
+.pixel-animation {
+  animation: pixelate 0.5s infinite;
+}
+
+.minecraft-chest {
+  background-color: var(--minecraft-dark-brown);
+  border: 8px solid var(--minecraft-brown);
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.3);
+}
+
+.dev-chest {
+  background-color: var(--minecraft-black);
+  border-color: var(--dev-purple);
+}
+
+.minecraft-chest::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: var(--minecraft-brown);
+  border-left: 8px solid var(--minecraft-dark-brown);
+  border-right: 8px solid var(--minecraft-dark-brown);
+}
+
+.dev-chest::before {
+  background-color: var(--dev-purple);
+  border-left-color: var(--minecraft-black);
+  border-right-color: var(--minecraft-black);
+}
+
+.minecraft-pixel-border {
+  border: 4px solid var(--minecraft-gray);
+  border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="none" stroke="%237e7e7e" stroke-width="2"/></svg>') 4;
+}
+
+.service-card {
+  background-color: var(--minecraft-black);
+  border: 6px solid var(--dev-purple);
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--minecraft-light-blue);
+  margin-bottom: 1rem;
+}
+
+.project-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(58, 180, 218, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.mini-map {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.map-flag {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-flag-home { background-color: var(--minecraft-light-blue); }
+.map-flag-services { background-color: var(--minecraft-green); }
+.map-flag-education { background-color: var(--minecraft-yellow); }
+.map-flag-experience { background-color: var(--minecraft-red); }
+.map-flag-projects { background-color: var(--minecraft-blue); }
+.map-flag-contact { background-color: var(--dev-purple); }
+
+.map-flag:hover {
+  transform: scale(1.2);
+}
+
+.map-flag.active {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px 3px var(--minecraft-light-blue);
+}
+
+.experience-preview {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-container {
+  min-height: 100vh;
+  padding: 40px 20px; /* Adjusted padding */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px; /* Constrain the container width */
+  margin: 0 auto; /* Center the container */
+}
+
+.home-left {
+  flex: 1;
+  min-width: 300px; /* Ensure minimum width */
+  display: flex;
+  justify-content: center;
+}
+
+.home-right {
+  flex: 1;
+  min-width: 300px; /* Ensure minimum width */
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.minecraft-terminal {
+  max-width: 500px;
+}
+
+.terminal-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: auto;
+  z-index: 10;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: var(--minecraft-light-blue);
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--minecraft-yellow);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.py-20 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mt-6 {
+  margin-top: 24px;
+}
+
+.mt-8 {
+  margin-top: 32px;
+}
+
+.mt-10 {
+  margin-top: 40px;
+}
+
+.mb-16 {
+  margin-bottom: 64px;
+}
+
+.space-y-3 > * + * {
+  margin-top: 12px;
+}
+
+.space-x-6 > * + * {
+  margin-left: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-white {
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  background-color: white;
+  color: black;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+
+.mobile-menu {
+  background-color: var(--minecraft-black);
+  padding: 16px;
+  border-bottom: 4px solid var(--dev-purple);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  color: var(--minecraft-yellow);
+  margin-bottom: 16px;
+}
+
+.service-description {
+  font-size: 1.125rem;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 33.333%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  width: 100%;
+  max-width: 66.667%;
+}
+
+.about-profile-pic {
+  width: 100%;
+  height: auto;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: var(--minecraft-light-blue);
+  margin-bottom: 16px;
+}
+
+.about-stamps {
+  margin-bottom: 24px;
+}
+
+.about-description {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  color: var(--minecraft-yellow);
+}
+
+.stat-label {
+  color: var(--minecraft-light-blue);
+}
+
+.education-container {
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.education-logo {
+  width: 100%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.education-details {
+  width: 100%;
+  max-width: 50%;
+}
+
+.education-timeline {
+  width: 100%;
+  max-width: 25%;
+  text-align: right;
+}
+
+.logo-image {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 8px;
+}
+
+.education-title {
+  font-size: 1.5rem;
+  color: var(--minecraft-light-blue);
+}
+
+.education-degree {
+  font-size: 1.125rem;
+}
+
+.education-specialization {
+  color: var(--minecraft-light-blue);
+}
+
+.timeline-years {
+  font-size: 1.25rem;
+  color: var(--minecraft-yellow);
+}
+
+.timeline-status {
+  color: var(--minecraft-light-blue);
+}
+
+.experience-container {
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience-preview-container {
+  width: 100%;
+  max-width: 50%;
+}
+
+.experience-details {
+  width: 100%;
+  max-width: 50%;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.experience-preview-container:hover .preview-overlay {
+  opacity: 1;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  color: var(--minecraft-light-blue);
+}
+
+.experience-role {
+  color: var(--minecraft-yellow);
+}
+
+.experience-description {
+  margin-top: 16px;
+  font-size: 1.125rem;
+}
+
+.experience-delivered {
+  margin-top: 16px;
+}
+
+.skills-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+}
+
+.project-image {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-content {
+  padding: 24px;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  color: var(--minecraft-light-blue);
+}
+
+.project-date {
+  color: var(--minecraft-yellow);
+}
+
+.project-description {
+  margin-top: 16px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.project-tags .minecraft-skill-tag {
+  font-size: 0.75rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.project-links .minecraft-button {
+  font-size: 0.875rem;
+}
+
+.bg-minecraft-blue {
+  background-color: var(--minecraft-blue);
+}
+
+.border-minecraft-light-blue {
+  border-color: var(--minecraft-light-blue);
+}
+
+.bg-minecraft-gray {
+  background-color: var(--minecraft-gray);
+}
+
+.border-minecraft-light-gray {
+  border-color: var(--minecraft-light-gray);
+}
+
+.bg-minecraft-green {
+  background-color: var(--minecraft-green);
+}
+
+.border-minecraft-dark-green {
+  border-color: var(--minecraft-dark-green);
+}
+
+.more-projects {
+  grid-column: span 1;
+}
+
+.more-projects-title {
+  font-size: 1.5rem;
+  color: var(--minecraft-light-blue);
+  margin-bottom: 16px;
+}
+
+.more-projects-description {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+}
+
+.contact-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--minecraft-black);
+  padding: 40px 0;
+  border-top: 4px solid var(--dev-purple);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-brand {
+  margin-bottom: 24px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.footer-subtitle {
+  color: var(--minecraft-light-gray);
+  margin-top: 8px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--minecraft-light-gray);
+}
+
+.footer-built {
+  margin-top: 8px;
+  font-size: 0.875rem;
+}
+
+.text-minecraft-red {
+  color: var(--minecraft-red);
+}
+
+.text-dev-purple {
+  color: var(--dev-purple);
+}
+
+.text-minecraft-light-blue {
+  color: var(--minecraft-light-blue);
+}
+
+.text-minecraft-yellow {
+  color: var(--minecraft-yellow);
+}
+
+.text-minecraft-light-gray {
+  color: var(--minecraft-light-gray);
+}
+
+@media (min-width: 768px) {
+  .md-hidden {
+      display: none;
+  }
+
+  .md-flex {
+      display: flex;
+  }
+
+  .home-container {
+      flex-direction: row;
+      flex-wrap: nowrap; /* Prevent wrapping on desktop */
+  }
+
+  .home-left, .home-right {
+      flex: 0 0 50%; /* Ensure equal 50% width */
+      min-width: 0; /* Allow flex items to shrink */
+  }
+
+  .profile-image {
+      width: 400px;
+      height: 400px;
+  }
+
+  .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-stats {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .footer-brand {
+      margin-bottom: 0;
+  }
+
+  .minecraft-section-title::before, .minecraft-section-title::after {
+      display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .minecraft-section-title::before, .minecraft-section-title::after {
+      display: none;
+  }
+
+  .mini-map {
+      display: none;
+  }
+
+  .home-container {
+      flex-direction: column;
+  }
+
+  .home-left, .home-right {
+      flex: 0 0 100%;
+      min-width: 0;
+  }
+
+  .profile-image {
+      width: 250px;
+      height: 250px;
+  }
+
+  .social-icons {
+      bottom: -50px;
+      position: relative;
+      left: 0;
+      transform: none;
+      margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .more-projects {
+      grid-column: span 3;
+  }
+}
